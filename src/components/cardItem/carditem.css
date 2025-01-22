@@ -1,0 +1,13 @@
+.country-card {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.country-flag {
+  margin-right: 10px;
+  width: 127px;
+  height: 96px;
+}

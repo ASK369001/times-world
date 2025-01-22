@@ -1,0 +1,13 @@
+.load-btn-container {
+  width: 100%;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.load-button {
+  width: 146px;
+  height: 48px;
+  background: #3d3d3d;
+  color: white;
+}

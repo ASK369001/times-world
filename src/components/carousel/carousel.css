@@ -18,6 +18,18 @@
   text-align: center;
   width: 26.6%;
 }
+.carousel-indicators button {
+  width: 9px !important;
+  height: 10px !important;
+  border-radius: 100%;
+}
+.carousel {
+  position: relative;
+  margin-bottom: 32px;
+}
+.carousel-indicators button[aria-current="false"] {
+  background-color: rgb(207, 207, 207) !important;
+}
 /* Adjust width for mobile screens (less than 'md') */
 @media (max-width: 768px) {
   .home-title {
@@ -31,4 +43,17 @@
     text-align: center;
     width: 100%;
   }
+}
+
+.carouselImage {
+  margin: auto;
+  width: 40%;
+  max-width: 40%;
+  min-width: 40%;
+}
+.carousel-caption {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 36%));
+  /* width: 59%; */
+  bottom: 0;
+  color: white !important;
 }

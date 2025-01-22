@@ -15,6 +15,7 @@ const countrySlice = createSlice({
   name: "country",
   initialState: {
     countries: [],
+    region: "all",
     visible: 10,
     status: "idle", // idle | loading | succeeded | failed
     error: null,
@@ -22,6 +23,9 @@ const countrySlice = createSlice({
   reducers: {
     loadMore: (state) => {
       state.visible += 10;
+    },
+    changeRegion: (state, action) => {
+      state.region = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -40,5 +44,5 @@ const countrySlice = createSlice({
   },
 });
 
-export const { loadMore } = countrySlice.actions;
+export const { loadMore, changeRegion } = countrySlice.actions;
 export default countrySlice.reducer;

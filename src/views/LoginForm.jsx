@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../reducers/authSlice";
 import LoginImage from "../assets/login_vector.svg";
+import SocialMedia from "../components/socialmedia/SocialMedia";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email || !password) {
-      setError("All fields are required.");
+      setError("Enter both email and password.");
       return;
     }
     if (!validatePassword(password)) {
@@ -43,7 +44,7 @@ const LoginForm = () => {
         <input
           className="login-input-field"
           type="email"
-          placeholder="Username or email"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -60,9 +61,17 @@ const LoginForm = () => {
           <label for="keep-signed-input">Keep me signed in</label>
         </span>
         <button className="login-button" type="submit">Login</button>
+        <div className="or-container">
+          <hr />
+          <span className="or-text">Or Sign In With</span>
+          <hr />
+        </div>
+        <div className="social-container-login">
+        <SocialMedia/>
+        </div>
       </form>
       <div className="d-none d-md-block">
-        <img src={LoginImage} alt="Login" width="400px" />
+        <img src={LoginImage} alt="Login" width="480px" />
       </div>
     </div>
   );

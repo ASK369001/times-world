@@ -1,3 +1,6 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+}
 .login-container {
   display: flex;
   flex-direction: row;
@@ -32,6 +35,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: small;
+  width: 60%;
   /* align-content: center; */
   flex-direction: row;
 }
@@ -57,6 +61,25 @@
   font-size: small;
   width: 60%;
 }
+.social-container-login{
+  width: 60%;
+}
+.or-container {
+  width: 59%;
+  display: flex;
+  font-weight: 700;
+  font-size: smaller;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.or-container hr {
+  width: 40%;
+}
+.or-text{
+  white-space: nowrap;
+  padding: 0 10px;
+}
 #root {
   height: 100vh;
 }
@@ -70,7 +93,9 @@
     width: 80%;
   }
   .login-input-field,
-  .login-button {
+  .login-button,
+  .social-container-login,
+  .keep-signed {
     width: 100%;
   }
 }
