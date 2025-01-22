@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../reducers/authSlice";
+import LoginImage from "../assets/login_vector.svg";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -33,24 +34,36 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="login-form">
-      <form onSubmit={handleSubmit}>
-        <h2>Login</h2>
-        {error && <p className="error">{error}</p>}
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h2 className="form-title text-center text-md-start">Sign in</h2>
+        <p>
+          New user? <a href="/register">Create an account</a>
+        </p>
         <input
+          className="login-input-field"
           type="email"
-          placeholder="Email"
+          placeholder="Username or email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
+          className="login-input-field"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        {error && <p className="error-message">{error}</p>}
+        <span className="keep-signed">
+          <input id="keep-signed-input" type="checkbox" /> 
+          <label for="keep-signed-input">Keep me signed in</label>
+        </span>
+        <button className="login-button" type="submit">Login</button>
       </form>
+      <div className="d-none d-md-block">
+        <img src={LoginImage} alt="Login" width="400px" />
+      </div>
     </div>
   );
 };
