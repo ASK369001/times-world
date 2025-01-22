@@ -1,9 +1,10 @@
 import React from "react";
+import Header from "../components/header/Header";
 
 const HomeView = () => {
   return (
-    <div>
-      <h2>Home</h2>
+    <div className="home-container">
+      <Header />
     </div>
   );
 };

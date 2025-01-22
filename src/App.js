@@ -8,7 +8,7 @@ import LoginForm from "./views/LoginForm";
 import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   return (
     <Provider store={store}>
       <Router>
