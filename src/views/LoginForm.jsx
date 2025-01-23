@@ -38,8 +38,8 @@ const LoginForm = () => {
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
         <h2 className="form-title text-center text-md-start">Sign in</h2>
-        <p>
-          New user? <a href="/register">Create an account</a>
+        <p className="new-user">
+          New user? <a className="create-account" href="/register">Create an account</a>
         </p>
         <input
           className="login-input-field"

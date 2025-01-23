@@ -7,7 +7,7 @@ const CarouselView = ({ countries }) => {
     <div>
       <div className="home-title">
         <span className="top"></span>
-        <h1>WELCOME</h1>
+        <h1 className="title">WELCOME</h1>
         <span className="bottom"></span>
       </div>
       <Carousel data-bs-theme="dark">
